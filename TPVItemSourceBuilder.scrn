@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<screen Title="深蓝砚台开发者中心" IconUrl="" Width="600px" Height="450px"  HorizonScrollbar="Hidden"    BackgroundColor="White" LangId="" HasTitleBar="true" Serializer="DBFX.Serializer.FormSerializer">
+  <xns>
+    <ns k="wc"  n="DBFX.Web.Controls" />
+    <ns k="lc"  n="DBFX.Web.LayoutControls" />
+    <ns k="dv"  n="DBFX.Design" />
+  </xns>
+  <controls>
+ 
+    <c T="wc:Panel" Padding="0px" Margin="0px" Display="block" Name="DesignerItemPanel"  Float="right" Width="50%"  Height="100%" HorizonScrollbar="hidden">
+      <controls>
+
+        <!--start-->
+        <c T="wc:Label" Text="绑定设置:"  Margin="4px 2px 2px 16px"/>
+        <c T="wc:BreakLine" BackgroundColor="lightgray"  Height="1px" Margin="4px 2px 8px 2px" />
+        <c T="wc:Label" Text="标题:" Margin="4px 2px 2px 16px"  Float="left"/>
+        <c T="wc:TextBox"  Display="block"  Margin="2px 4px 2px 2px" Name ="Title" DataBindings="{&quot;Path&quot;:&quot;Text&quot;,&quot;Mode&quot;:&quot;OneWay&quot;,&quot;Source&quot;:&quot;&quot;}" />
+
+        <c T="wc:BreakLine" BackgroundColor="lightgray" Margin="8px 2px 8px 2px" />
+        <c T="wc:Label" Text="副标题:" Margin="4px 2px 2px 16px"  Float="left"/>
+        <c T="wc:TextBox"  Display="block"  Margin="2px 4px 2px 2px" Name="SubTitle" DataBindings="{&quot;Path&quot;:&quot;SubTitle&quot;,&quot;Mode&quot;:&quot;OneWay&quot;,&quot;Source&quot;:&quot;&quot;}" />
+
+        <c T="wc:BreakLine" BackgroundColor="lightgray" Margin="8px 2px 8px 2px" />
+        <c T="wc:Label" Text="默认图片:" Margin="4px 2px 2px 16px"  Float="left"/>
+        <c T="wc:TextBox"  Display="block"  Margin="2px 4px 2px 2px" Name="DefaultImg" DataBindings="{&quot;Path&quot;:&quot;DefaultImg&quot;,&quot;Mode&quot;:&quot;OneWay&quot;,&quot;Source&quot;:&quot;&quot;}" />
+
+        <c T="wc:BreakLine" BackgroundColor="lightgray" Margin="8px 2px 8px 2px" />
+        <c T="wc:Label" Text="选中图片:" Margin="4px 2px 2px 16px"  Float="left"/>
+        <c T="wc:TextBox"  Display="block"  Margin="2px 4px 2px 2px" Name="SelectedImg" DataBindings="{&quot;Path&quot;:&quot;SelectedImg&quot;,&quot;Mode&quot;:&quot;OneWay&quot;,&quot;Source&quot;:&quot;&quot;}" />
+
+
+        <c T="wc:BreakLine" BackgroundColor="lightgray" Margin="8px 2px 8px 2px" />
+        <c T="wc:Label" Text="资源:" Margin="4px 2px 2px 16px"  Float="left"/>
+        <c T="wc:TextBox"  Display="block"  Margin="2px 4px 2px 2px" Name="PageUri" DataBindings="{&quot;Path&quot;:&quot;PageUri&quot;,&quot;Mode&quot;:&quot;OneWay&quot;,&quot;Source&quot;:&quot;&quot;}" />
+        
+        <c T="wc:BreakLine" BackgroundColor="lightgray"  Height="1px" Margin="8px 2px 8px 2px" />
+        
+        <c T="wc:Button" Text="添加页面"  Name="AddItemButton"   Height="35px" Display="block" Margin="32px 4px 4px 4px"></c>
+        <c T="wc:Button" Text="删除页面" Name="RemoveItemButton"  Height="35px" Display="block"  Margin="4px"></c>
+        <c T="wc:Button" Text="确    定" Name="SaveButton"  Height="35px" Display="block"  Margin="4px"></c>
+
+      </controls>
+    </c>
+
+    <c T="wc:Panel" HorizonScrollbar="hidden" Position="relative"  Display="block" BackgroundColor="white"  Height="100%">
+      <controls>
+        <!--start-->
+        <c T="wc:Label" Text="页面列表:"  Margin="4px 2px 2px 16px" />
+        <c T="wc:BreakLine" BackgroundColor="lightgray"  Height="1px" Margin="4px 2px 2px 2px" />
+
+        <c T="wc:ListView" Name="ListView" Width="100%" Position="absolute" Top="32px" Bottom="1px"  Left="1px" Right="2px" ItemTemplate="SessionItemTemplate" ItemSelectedTemplate="SessionItemTemplate1" >
+          <Items>
+          </Items>
+          <Templates>
+            <t Key="SessionItemTemplate" Uri="">
+              <controls>
+                <c T="wc:Panel" BackgroundColor="white" BorderWidth="1px" BorderColor="transparent transparent lightgray transparent">
+                  <controls>
+                   <c T="wc:Label" Margin="4px 2px 2px 16px" DataBindings="{&quot;Path&quot;:&quot;Text&quot;,&quot;Mode&quot;:&quot;OneWay&quot;,&quot;Source&quot;:&quot;&quot;}"></c>
+
+                    <c T="wc:Label" Margin="4px 2px 2px 16px" DataBindings="{&quot;Path&quot;:&quot;SubTitle&quot;,&quot;Mode&quot;:&quot;OneWay&quot;,&quot;Source&quot;:&quot;&quot;}"></c>
+                  </controls>
+                </c>
+              </controls>
+            </t>
+            <t Key="SessionItemTemplate1" Uri="">
+              <controls>
+                <c T="wc:Panel" BackgroundColor="lightblue" BorderWidth="1px" BorderColor="lightgray">
+                  <controls>
+                    <c T="wc:Label" Margin="4px 2px 2px 16px" DataBindings="{&quot;Path&quot;:&quot;Text&quot;,&quot;Mode&quot;:&quot;OneWay&quot;,&quot;Source&quot;:&quot;&quot;}"></c>
+
+                    <c T="wc:Label" Margin="4px 2px 2px 16px" DataBindings="{&quot;Path&quot;:&quot;SubTitle&quot;,&quot;Mode&quot;:&quot;OneWay&quot;,&quot;Source&quot;:&quot;&quot;}"></c>
+                  </controls>
+                </c>
+              </controls>
+            </t>
+          </Templates>
+          <ItemSource>
+            <News>
+            </News>
+          </ItemSource>
+        </c>
+      </controls>
+    </c>
+    <!--end-->
+  </controls>
+
+</screen>

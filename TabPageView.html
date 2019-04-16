@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TabPageView</title>
+    <link rel="stylesheet" href="TabPageView.css">
+    <style>
+        /*#div{*/
+            /*background: linear-gradient(90deg,#2a27ff, #155799 30%, #159957 70%, red 100%);*/
+        /*}*/
+    </style>
+
+    <script src="https://lc.dbazure.cn/dbfx/dbfx.js"></script>
+    <script src="https://lc.dbazure.cn/dbfx/dbfx.data.js"></script>
+    <script src="https://lc.dbazure.cn/dbfx/dbfx.commodel.js"></script>
+    <script src="https://lc.dbazure.cn/dbfx/dbfx.serializer.js"></script>
+    <script src="https://lc.dbazure.cn/dbfx/dbfx.net.js"></script>
+    <script src="https://lc.dbazure.cn/dbfx/dbfx.resources.js"></script>
+
+    <script src="https://lc.dbazure.cn/dbfx/dbfx.commodel.js"></script>
+    <script src="https://lc.dbazure.cn/dbfx/dbfx.serializer.js"></script>
+    <script src="https://lc.dbazure.cn/dbfxui/dbfx.web.controls.js"></script>
+    <script src="https://lc.dbazure.cn/dbfxui/dbfx.web.layoutcontrols.js"></script>
+    <script src="https://lc.dbazure.cn/dbfxui/dbfx.web.navigation.js"></script>
+    <script src="https://lc.dbazure.cn/dbfx/dbfx.app.js"></script>
+
+    <script src="TabPageView.js"></script>
+</head>
+<body>
+<div id="div" style="height: 300px;width: 600px;border: 1px solid #ffaa30"></div>
+<input type="text" onkeyup="this.value=this.value.replace(/[^\d]/g,'') " onafterpaste="this.value=this.value.replace(/[^\d]/g,'') " name="f_order" value="1"/>
+
+<script>
+
+    var divE = document.getElementById("div");
+    var pv = new DBFX.Web.Controls.TabPageView();
+    divE.appendChild(pv.VisualElement);
+
+    // divE.style.background = "linear-gradient(90deg,#2a27ff, #155799 30%, #159957 70%, red 100%)";
+
+    // pv.ItemSource = [{"Text":"项目1"},{"Text":"项目2"},{"Text":"项目3"},{"Text":"项目4"}];
+
+
+
+    pv.ItemDefaultBGC = "#d8dbdc";
+    pv.ItemSelectedBGC = "#527aff";
+    pv.NaviBarBGC = "#ffd2bc";
+
+
+
+    // pv.ItemArrangeDir = "horizontal";
+    pv.NaviBarH = "100px";
+
+    pv.TextMember = "Text";
+
+    pv.ItemWidth = "130px";
+    pv.ItemHeight = "80px";
+
+    pv.ItemBorderR = "10px 10px 2px 2px";
+    pv.ItemBorder = "1px solid red";
+
+
+    pv.Width = "600px";
+    pv.Height = "100%";
+
+
+
+    pv.NaviBarPos = "bottom";
+    pv.NaviBarPos = "top";
+    // pv.NaviBarPos = "bottom";
+
+
+    pv.SelectIndex = "aafsdfa2";
+
+    pv.ItemSource = [{"Text":"项目1","DefaultImg":"./01.png","SubTitle":"副标题1","SelectedImg":"./02.png"},
+                        {"Text":"项目2","DefaultImg":"./01.png","SubTitle":"副标题2","SelectedImg":"./02.png"},
+                        {"Text":"项目3","DefaultImg":"./01.png","SubTitle":"副标题3","SelectedImg":"./02.png"},
+                        {"Text":"项目4","DefaultImg":"./01.png","SubTitle":"副标题4","SelectedImg":"./02.png"}];
+
+
+
+
+
+
+    // pv.NaviBarPos = "top";
+    // var a = "hello";
+    // var str = {_id:a,SUB_id:a};
+    // var str01 = JSON.stringify(str);
+    // console.log(str01);
+
+    // var index = 2;
+    // var count = 0;
+    // var insert = 233;
+    //
+    // var arr = [1,2,3,4,5];
+    // var b = arr.splice(3,1)[0];
+    // var a = arr.splice(2,0,b);
+    //
+    // console.log(arr);
+
+    var notificationContent = {
+        "aps":{
+            "alert":{
+                "title":"标题",
+                "subtitle":"子标题",
+                "body":"内容",
+                "action-loc-key" : "PLAY"
+            },
+            "badge":1,
+            "sound":"default",
+            "userinfo":{
+                "name":"123",
+                "age":12,
+                "sex":"男"
+            },
+            "category":"Category",
+            "content-available":1,
+            "thread-id":"thread-id"
+        }
+    }
+
+    // build = function (a,f) {
+    //     var b = new Object();
+    //     console.log(a);
+    //     f();
+    //     return b;
+    // }
+    //
+    // var b = new build("hello",function () {
+    //     console.log("world");
+    //     console.log(b);
+    // })
+
+    console.log(JSON.stringify(new Date()));
+
+</script>
+
+</body>
+</html>

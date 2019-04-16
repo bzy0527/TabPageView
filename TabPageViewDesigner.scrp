@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<screenpart BackgroundColor="Transparent" HorizonScrollbar="Hidden" Margin="0px" Padding="0px" Serializer="DBFX.Serializer.FormPartSerializer">
+
+  <xns>
+    <ns k="wc"  n="DBFX.Web.Controls" />
+    <ns k="lc"  n="DBFX.Web.LayoutControls" />
+    <ns k="dv"  n="DBFX.Design" />
+  </xns>
+
+  <controls>
+
+    <c T="wc:Panel"  Shadow="none" BorderWidth="0px" Margin="2px 0px 2px 0px" MinWidth="230px" >
+    <controls>
+
+    <c T="wc:BreakLine" BackgroundColor="lightgray"  BorderWidth="0px"    Height="1px" Margin="2px" />
+    <c T="wc:BreakLine" />
+    <c T="wc:Label" Text="导航栏高度:" Margin="4px 2px 2px 16px" Float="left"/>
+    <c T="wc:TextBox" Display="block" Height="26px" Margin="2px 14px 2px 16px" DataBindings="{&quot;Path&quot;:&quot;NaviBarH&quot;,&quot;Mode&quot;:&quot;OneWay&quot;,&quot;Source&quot;:&quot;&quot;}" />
+
+    <c T="wc:BreakLine" />
+    <c T="wc:Label" Text="导航栏背景色:" Margin="4px 2px 2px 16px" Float="left"/>
+    <c T="wc:ColorPicker" Display="block" Height="26px" Margin="2px 14px 2px 16px" DataBindings="{&quot;Path&quot;:&quot;NaviBarBGC&quot;,&quot;Mode&quot;:&quot;OneWay&quot;,&quot;Source&quot;:&quot;&quot;}" />
+
+    <c T="wc:BreakLine" />
+    <c T="wc:Label" Text="导航栏位置:" Margin="4px 2px 2px 16px" Float="left"/>
+    <c T="wc:ComboBox" Display="block" Height="26px" Margin="2px 14px 2px 16px" DataBindings="{&quot;Path&quot;:&quot;NaviBarPos&quot;,&quot;Mode&quot;:&quot;OneWay&quot;,&quot;Source&quot;:&quot;&quot;}" >
+        <Items>
+              <Item Text="上" Value="top"  ImageUrl="" />
+              <Item Text="下" Value="bottom"  ImageUrl="" />
+         </Items>
+    </c>
+
+    <c T="wc:BreakLine" BackgroundColor="lightgray"  BorderWidth="0px"    Height="1px" Margin="2px" />
+    <c T="wc:BreakLine" />
+    <c T="wc:Label" Text="分项字体颜色:" Margin="4px 2px 2px 16px" Float="left"/>
+    <c T="wc:ColorPicker" Display="block" Height="26px" Margin="2px 14px 2px 16px" DataBindings="{&quot;Path&quot;:&quot;ItemDefaultColor&quot;,&quot;Mode&quot;:&quot;OneWay&quot;,&quot;Source&quot;:&quot;&quot;}" />
+
+    <c T="wc:BreakLine" />
+    <c T="wc:Label" Text="分项选中字体颜色:" Margin="4px 2px 2px 16px" Float="left"/>
+    <c T="wc:ColorPicker" Display="block" Height="26px" Margin="2px 14px 2px 16px" DataBindings="{&quot;Path&quot;:&quot;ItemSelectColor&quot;,&quot;Mode&quot;:&quot;OneWay&quot;,&quot;Source&quot;:&quot;&quot;}" />
+
+    <c T="wc:BreakLine" />
+    <c T="wc:Label" Text="分项背景色:" Margin="4px 2px 2px 16px" Float="left"/>
+    <c T="wc:ColorPicker" Display="block" Height="26px" Margin="2px 14px 2px 16px" DataBindings="{&quot;Path&quot;:&quot;ItemDefaultBGC&quot;,&quot;Mode&quot;:&quot;OneWay&quot;,&quot;Source&quot;:&quot;&quot;}" />
+
+    <c T="wc:BreakLine" />
+    <c T="wc:Label" Text="分项选中背景色:" Margin="4px 2px 2px 16px" Float="left"/>
+    <c T="wc:ColorPicker" Display="block" Height="26px" Margin="2px 14px 2px 16px" DataBindings="{&quot;Path&quot;:&quot;ItemSelectedBGC&quot;,&quot;Mode&quot;:&quot;OneWay&quot;,&quot;Source&quot;:&quot;&quot;}" />
+
+    <c T="wc:BreakLine" BackgroundColor="lightgray"  BorderWidth="0px"    Height="1px" Margin="2px" />
+    <c T="wc:BreakLine" />
+    <c T="wc:Label" Text="选项宽度:" Margin="4px 2px 2px 16px" Float="left"/>
+    <c T="wc:TextBox" Display="block" Height="26px" Margin="2px 14px 2px 16px" DataBindings="{&quot;Path&quot;:&quot;ItemWidth&quot;,&quot;Mode&quot;:&quot;OneWay&quot;,&quot;Source&quot;:&quot;&quot;}" />
+
+    <c T="wc:BreakLine" />
+    <c T="wc:Label" Text="选项高度:" Margin="4px 2px 2px 16px" Float="left"/>
+    <c T="wc:TextBox" Display="block" Height="26px" Margin="2px 14px 2px 16px" DataBindings="{&quot;Path&quot;:&quot;ItemHeight&quot;,&quot;Mode&quot;:&quot;OneWay&quot;,&quot;Source&quot;:&quot;&quot;}" />
+
+    <c T="wc:BreakLine" />
+    <c T="wc:Label" Text="选项圆角:" Margin="4px 2px 2px 16px" Float="left"/>
+    <c T="wc:TextBox" Display="block" Height="26px" Margin="2px 14px 2px 16px" DataBindings="{&quot;Path&quot;:&quot;ItemBorderR&quot;,&quot;Mode&quot;:&quot;OneWay&quot;,&quot;Source&quot;:&quot;&quot;}" />
+
+    <c T="wc:BreakLine" />
+    <c T="wc:Label" Text="选项边框:" Margin="4px 2px 2px 16px" Float="left"/>
+    <c T="wc:TextBox" Display="block" Height="26px" Margin="2px 14px 2px 16px" DataBindings="{&quot;Path&quot;:&quot;ItemBorder&quot;,&quot;Mode&quot;:&quot;OneWay&quot;,&quot;Source&quot;:&quot;&quot;}" />
+
+    <c T="wc:BreakLine" />
+    <c T="wc:Label" Text="选项图片宽高:" Margin="4px 2px 2px 16px" Float="left"/>
+    <c T="wc:TextBox" Display="block" Height="26px" Margin="2px 14px 2px 16px" DataBindings="{&quot;Path&quot;:&quot;ItemImageSize&quot;,&quot;Mode&quot;:&quot;OneWay&quot;,&quot;Source&quot;:&quot;&quot;}" />
+
+    <c T="wc:BreakLine" />
+    <c T="wc:Label" Text="选项内容方向:" Margin="4px 2px 2px 16px" Float="left"/>
+    <c T="wc:ComboBox" Display="block" Height="26px" Margin="2px 14px 2px 16px" DataBindings="{&quot;Path&quot;:&quot;ItemArrangeDir&quot;,&quot;Mode&quot;:&quot;OneWay&quot;,&quot;Source&quot;:&quot;&quot;}">
+            <Items>
+              <Item Text="水平排列" Value="horizontal"  ImageUrl="" />
+              <Item Text="垂直排列" Value="vertical"  ImageUrl="" />
+            </Items>
+    </c>
+
+    <c T="wc:BreakLine" BackgroundColor="lightgray"  BorderWidth="0px"    Height="1px" Margin="2px" />
+    <c T="wc:BreakLine" />
+    <c T="wc:Label" Text="选中项:" Margin="4px 2px 2px 16px" Float="left"/>
+    <c T="wc:TextBox" Display="block" Height="26px" Margin="2px 14px 2px 16px" DataBindings="{&quot;Path&quot;:&quot;SelectIndex&quot;,&quot;Mode&quot;:&quot;OneWay&quot;,&quot;Source&quot;:&quot;&quot;}" />
+
+    <c T="wc:BreakLine" />
+    <c T="wc:Label" Text="标题成员:" Margin="4px 2px 2px 16px" Float="left"/>
+    <c T="wc:TextBox" Display="block" Height="26px" Margin="2px 14px 2px 16px" DataBindings="{&quot;Path&quot;:&quot;TextMember&quot;,&quot;Mode&quot;:&quot;OneWay&quot;,&quot;Source&quot;:&quot;&quot;}" />
+
+    <c T="wc:BreakLine" />
+    <c T="wc:Label" Text="副标题成员:" Margin="4px 2px 2px 16px" Float="left"/>
+    <c T="wc:TextBox" Display="block" Height="26px" Margin="2px 14px 2px 16px" DataBindings="{&quot;Path&quot;:&quot;SubTitleMember&quot;,&quot;Mode&quot;:&quot;OneWay&quot;,&quot;Source&quot;:&quot;&quot;}" />
+
+    <c T="wc:BreakLine" />
+    <c T="wc:Label" Text="默认图片成员:" Margin="4px 2px 2px 16px" Float="left"/>
+    <c T="wc:TextBox" Display="block" Height="26px" Margin="2px 14px 2px 16px" DataBindings="{&quot;Path&quot;:&quot;ImgMember&quot;,&quot;Mode&quot;:&quot;OneWay&quot;,&quot;Source&quot;:&quot;&quot;}" />
+
+    <c T="wc:BreakLine" />
+    <c T="wc:Label" Text="选中图片成员:" Margin="4px 2px 2px 16px" Float="left"/>
+    <c T="wc:TextBox" Display="block" Height="26px" Margin="2px 14px 2px 16px" DataBindings="{&quot;Path&quot;:&quot;SelectedImgMember&quot;,&quot;Mode&quot;:&quot;OneWay&quot;,&quot;Source&quot;:&quot;&quot;}" />
+
+    <c T="wc:BreakLine" />
+    <c T="wc:Label" Text="页面资源成员:" Margin="4px 2px 2px 16px" Float="left"/>
+    <c T="wc:TextBox" Display="block" Height="26px" Margin="2px 14px 2px 16px" DataBindings="{&quot;Path&quot;:&quot;PageUriMember&quot;,&quot;Mode&quot;:&quot;OneWay&quot;,&quot;Source&quot;:&quot;&quot;}" />
+
+    <c T="wc:BreakLine" />
+    <c T="wc:Label" Text="页面配置:" Margin="4px 2px 2px 16px" Float="left"/>
+    <c T="dv:TypeEditors.TPVItemsBuilder" Display="block"  Margin="2px 14px 2px 16px" />
+
+      </controls>
+    </c>
+
+    <c T="dv:TypeEditors.EventList" Name="EventListBox" Text="事件处理程序" Shadow="node" Margin="2px 0px 2px 0px" MinWidth="64px">
+    </c>
+  </controls>
+</screenpart>

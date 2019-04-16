@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+        .div01{
+            width: 100%;
+            height: 600px;
+            background-color: rgb(61, 87, 255);
+            position: relative;
+            /*opacity: 0.5;*/
+
+
+        }
+
+        .div02{
+            position: relative;
+            width: 100%;
+            height: 120px;
+            background-color: rgba(135, 206, 235, 0.49);
+        }
+
+        .div03{
+            position: absolute;
+            width: 50%;
+            /*height: 360px;*/
+            left: 0px;
+            right: 0px;
+            top: 125px;
+            bottom: 125px;
+            /*background-color: rgba(255, 255, 255, 0.18);*/
+            background-image: linear-gradient(120deg ,rgba(255, 255, 255, 0.18));
+        }
+
+        .textInput{
+            width: 80%;
+            height: 20px;
+            margin-left: 50px;
+            position: absolute;
+            top: 300px;
+        }
+
+        .div04{
+            /*width: 100%;*/
+            height: 120px;
+            background-color: #2a27ff;
+            position: absolute;
+            left: 0px;
+            right: 0px;
+            bottom: 0px;
+        }
+
+    </style>
+</head>
+<body>
+<div class="div01">
+    <div class="div02" id="da">
+
+    </div>
+    <div class="div03">
+        <input type="text" class="textInput" id="tb">
+    </div>
+
+    <div class="div04" id="dd"></div>
+</div>
+
+<script>
+    var input = document.getElementById("tb");
+    var result = document.getElementById("da");
+    var result01 = document.getElementById("dd");
+
+    input.onkeydown = function (ev) {
+        result.innerText = "keydown:"+input.value;
+    }
+
+    input.onkeyup = function (ev) {
+        result01.innerText = "keyup:"+input.value;
+    }
+
+    document.addEventListener("keydown",function (ev) {
+        console.log(ev.keyCode);
+        console.log(ev.ctrlKey);
+    },false);
+
+</script>
+</body>
+</html>
